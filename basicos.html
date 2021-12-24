@@ -10,9 +10,10 @@
 
 <body>
   <h1>Fundamentos JavaScritp</h1>
+  <h2 style="color: red">Ver Consola para la info</h2>
 </body>
 
-<!--! A continuacion veremos let para declarar variables -->
+<!--! let para declarar variables -->
 <script>
 
   // podemos declarar variables let vacias, es decir sin valor inicial
@@ -36,7 +37,7 @@
   console.log('%c***************Cambio de tema a const con datos primitivos********************', 'background: #222; color: #bada55')
 </script>
 
-<!--! A continuacion veremos const para declarar constantes -->
+<!--! const para declarar constantes -->
 <script>
 
   // const en valores primitivos es decir aquellos que se puede acceder directo a su valor, o sea que no son arreglos u objetos
@@ -67,6 +68,61 @@
   console.log(objeto)
   console.log(`Agregamos un color al Array `)
   console.log(arregloColores)
+
+</script>
+
+<!--! cadenas de texto aka string -->
+<script>
+
+  let nombre = 'Alfonso'
+  let apellido = "Villanueva"
+  let saludo = new String('Que tranza banda como estan?')
+
+  console.log('%c***************trabajando con cadenas de texto aka strings********************', 'background: #222; color: #bada55')
+  console.log(`cadena de texto con \'\' simples: ${nombre}`)
+  console.log(`cadena de texto con \"\" dobles: ${apellido}`)
+  console.log(`cadena de texto con el metodo new String: ${saludo}`)
+  console.log(saludo)
+
+  console.log('%c***************la propiedad .length contara el numero de caracteres incluyendo los espacios********************', 'background: #222; color: #bada55')
+
+  console.log(`propiedad .length con la variable nombre: ${nombre.length}`)
+  console.log(`propiedad .length con la variable apellido: ${apellido.length}`)
+  console.log(`propiedad .length con la variable saludos: ${saludo.length}`)
+
+  // todo metodo lleva () al final de su llamdado por ejemplo toUpperCase()
+  console.log('%c***************Metodos toUpperCase() y toLowerCase()********************', 'background: #222; color: #bada55')
+
+  console.log(`Usando el metodo toUpperCase() con la variable nombre ${nombre.toUpperCase()}`)
+  console.log(`Usando el metodo toLowerCase() con la variable nombre ${nombre.toLowerCase()}`)
+
+  // el metodo icludes te pide el dato a buscar, por ejemplo variable.includes(alfonso)
+  console.log('%c***************Metodo includes()********************', 'background: #222; color: #bada55')
+
+  let nombreCompleto = 'Alfonso Villanueva Quiroz'
+
+  console.log(`La variable nombreCompleto incluye: ${nombreCompleto}`)
+  console.log(`Usando el metodo include() veremos si la variable nombreCompleto incluye "Dany": ${nombreCompleto.includes("Dany")}`)
+  console.log(`Usando el metodo include() veremos si la variable nombreCompleto incluye "Villanueva": ${nombreCompleto.includes("Villanueva")}`)
+
+  console.log('%c***************Metodo trim()********************', 'background: #222; color: #bada55')
+
+  // el metodo trim "limpia o quita" los espacios antes o despues de cierto parametro
+  let nombreEspacios = '    Alfonso    '
+  console.log(`El metodo trim "limpia o quita" los espacios antes o despues de cierto parametro, varible nombreEspacios antes del trim: ${nombreEspacios}`)
+
+  console.log(`Variable nombreEspacios con el trim: ${nombreEspacios.trim()}`)
+
+  console.log('%c***************Metodo split()********************', 'background: #222; color: #bada55')
+
+  // el metodo split va a partir un texto en funcion del parametro que le indiquemos
+  let lorem = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, beatae commodi. Quisquam perferendis iure amet doloremque cupiditate, dolorum quod perspiciatis vitae nulla natus, odio similique explicabo, fugit repudiandae commodi. Velit?'
+
+  console.log(`Variable lorem antes de hacerle split: ${lorem}`)
+  console.log(`Variable lorem con un split por cada espacio que tenga:`)
+  console.log(lorem.split(" "))
+  console.log(`Variable lorem con un split por cada punto que tenga:`)
+  console.log(lorem.split("."))
 
 </script>
 
