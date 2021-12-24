@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+  <h1>Fundamentos JavaScritp</h1>
+</body>
+
+<!--! A continuacion veremos let para declarar variables -->
+<script>
+
+  // podemos declarar variables let vacias, es decir sin valor inicial
+  let hola;
+  console.log(hola);
+
+  // declaramos una variable let con valor inicial
+  let alfonso = 'Hola mundo'
+  console.log(`La variable Alfonso antes del bloque vale ${alfonso}`)
+
+  /* Ambito de Bloque: para que una varible sea de ambito de bloque es decir que solo sea considerada en un bloque la tienes que declarar con let , es decir, ya no ocupemos var para nada */
+
+  {
+    let alfonso = 'alfonso';
+    console.log(`La variable Alfonso dentro del bloque vale ${alfonso}`)
+  }
+
+  // Si hacemos console.log a la variable fuera del bloque no nos dara nada (ver consola en navegador) O BIEN NOS DARA EL VALOR ANTERIOR DEL BLOQUE
+
+  console.log(`La variable Alfonso despues del bloque vale lo mismo que antes del bloque: ${alfonso}`)
+  console.log('%c***************Cambio de tema a const con datos primitivos********************', 'background: #222; color: #bada55')
+</script>
+
+<!--! A continuacion veremos const para declarar constantes -->
+<script>
+
+  // const en valores primitivos es decir aquellos que se puede acceder directo a su valor, o sea que no son arreglos u objetos
+  const PI = 3.1416
+  console.log(`El valor de la const PI es ${PI} este es un valor primitivo (se puede acceder directo a su valor es decir que no es arreglo u objeto) no se puede reasignar, es constante, nunca cambiara su valor`)
+
+  console.log('%c***************const en arreglos u objetos********************', 'background: #222; color: #bada55')
+
+  const objeto = {
+    nombre: 'Alfonso',
+    edad: 31
+  }
+
+  const arregloColores = ["Verde", "Blanco"];
+
+  console.log(`Arrancamos un Objeto declarado unicamente con dos campos `)
+  console.log(objeto)
+  console.log(`Arrancamos un Array declarado unicamente con dos campos `)
+  console.log(arregloColores)
+
+  // const en arreglos u objetos me permite agregar valores al arreglo o al objeto
+
+  objeto.correo = 'alfonso@villanuevagarcia.com';
+
+  arregloColores.push('Rojo')
+
+  console.log(`Agregamos un campo al Objeto `)
+  console.log(objeto)
+  console.log(`Agregamos un color al Array `)
+  console.log(arregloColores)
+
+</script>
+
+
+</html>
