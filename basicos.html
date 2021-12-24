@@ -126,5 +126,37 @@
 
 </script>
 
+<!-- !template strings -->
+<script>
+
+
+  // concatenacion
+  console.log('%c***************Concatenacion********************', 'background: #222; color: #bada55')
+
+
+  console.log("Recoredemos el valor de las variables:")
+  console.log(`Nombre ${nombre}`)
+  console.log(`Apellido: ${apellido}`)
+
+  console.log(`Formato de concatenacion: "Un string" + variable + "otro string" (Forma aburrida, tediosa y antigua) // Hola mi nombre es " + nombre + " " + apellido + "."`)
+  console.log("Resultado de concatenacion: Hola mi nombre es " + nombre + " " + apellido + ".")
+
+  // template string o interpolacion de variables
+  console.log('%c***************Template String o Interpolacion de variables  :)********************', 'background: #222; color: #bada55')
+  console.log("Formato de Template String:  \`Hola mi nombre es ${nombre} ${apellido}.\` se debe realizar con el backtit ( \` )")
+  console.log(`Resultado con Template string: Hola mi nombre es ${nombre} ${apellido}.`)
+
+  let ul = `<ul>
+    <li>${nombre}</li>
+    <li>${apellido}</li>
+    <li>${nombreCompleto}</li>
+    <li>${nombreEspacios}</li>
+  </ul>`;
+
+  console.log(ul)
+
+</script>
+
+
 
 </html>
