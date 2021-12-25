@@ -210,4 +210,115 @@
 
 </script>
 
+<!-- ! Valores primitivos null NaN y undefined -->
+<script>
+
+  console.log('%c***************Valores primitivos null NaN y undefined********************', 'background: #222; color: #bada55')
+
+  // undefined se da principalmente cuando una variable fue iniciada sin valor y que a lo largo de la aplicación no se le ha asignado valor
+  let indefinido;
+  console.log(`Hemos inicializado una variable sin valor let indefinido; y el varlor de dicha variable es el siguiente: ${indefinido}`)
+
+  // cuando creamos una variable e intencionalmente le asignamos el valor null
+  let nulo = null;
+  console.log(`cuando creamos una variable e intencionalmente le asignamos el valor null "let nulo = null;" dara como resultado: ${nulo} `)
+
+  // NaN significa Not a Number y nos arrojara este erro cuando la variable no es nun numero
+
+  let noEsUnNumero = 'hola' * 4;
+  console.log(`NaN significa Not a Number y nos arrojara este error cuando la variable no es un numero, por ejemplo "let noEsUnNumero = 'hola' * 4;" nos dara el resultado: ${noEsUnNumero}`)
+
+</script>
+
+<!-- ! Funciones -->
+<script>
+  console.log('%c*************** Funciones ********************', 'background: #222; color: red')
+
+  // una funcion es un bloque de codigo autocontenido que se define una solo vez y puede ser ejecutado en cualquier momento en la app. Opcionalmente, la funcion puede recibir parametros y devolver un valor en funcion de dichos parametros, se dice que las funciones son ciudadanos de primera clase ya que se le puede asignar valores como argumentos y usarse como 
+
+  console.log(`vamos a declarar la funcion alfgow:
+
+   function alfgow() {
+    console.log('uno')
+    console.log('dos')
+    console.log('tres')
+  }
+
+  veamos el resultado:`)
+  // primero veremos como declarar la funcion
+
+  function alfgow() {
+    console.log('uno')
+    console.log('dos')
+    console.log('tres')
+  }
+
+  // ahora ejecutaremos la funcion
+  alfgow();
+
+  // funcion que devuelve un valor
+  console.log(`vamos a declarar la funcion "funcionQueDevuelveUnValor":
+
+  function funcionQueDevuelveUnValor() {
+    console.log('uno')
+    console.log('dos')
+    console.log('tres')
+    return "Esta funcion imprime tres console log"
+  }
+
+  veamos el resultado:`)
+
+  function funcionQueDevuelveUnValor() {
+    console.log('uno')
+    console.log('dos')
+    console.log('tres')
+    return "Esta funcion imprime tres console log"
+  }
+
+  let valorDeLaFuncionConRetur = funcionQueDevuelveUnValor();
+
+  console.log(valorDeLaFuncionConRetur)
+
+  console.log('%c***************Funcion que recibe parametros********************', 'background: #222; color: #bada55')
+
+  console.log(`vamos a declarar la funcion "saludar":
+
+  function saludar(nombre, apellido) {
+    console.log(\` Hola nombre y apellido \`)
+  }`)
+
+
+  console.log(`Recordemos el valor de la variable nombre: ${nombre}`)
+  console.log(`Recordemos el valor de la variable apellido: ${apellido}`)
+
+  function saludar(nombre, apellido) {
+    console.log(`Hola ${nombre} ${apellido}`);
+  }
+
+  saludar(nombre, apellido);
+
+</script>
+
+<!-- ! Funciones declaradas vs funciones expresadas -->
+<script>
+
+  console.log('%c***************llamado de la funcion declarada antes de ser declarada********************', 'background: #222; color: #bada55')
+
+  declarada()
+  console.log('%c*************** Funciones declaradas vs funciones expresadas ********************', 'background: #222; color: red')
+
+  function declarada() {
+    console.log(`Una funcion declarada puede invocarse en cualqier parte de la app, incluso antes de que la funcion sea declarada`)
+  }
+
+  // funcion anonima
+  const funcionExpresada = function () {
+    console.log(`Esto es una funcion Expresada, es decir una funcion que se le ha asignado como un valor a una variable, si invocamos esta funcion antes de su definicion, JS nos dira "Error: no se puede acceder a funcionExpresada() antes de ser inicializada" es decir que no se puede ejecutar la funcionExpresada antes de ser declarada.`)
+  }
+
+  funcionExpresada()
+
+</script>
+
+
 </html>
