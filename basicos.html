@@ -411,4 +411,141 @@
 
 </script>
 
+<!-- !condicionales -->
+
+<script>
+
+  console.log('%c */*/*/ Condicionales  */*/*/*/', 'color:#a5c71b')
+
+  // if else: condicional que nos permite evaluar una expresion y si esta se cumple, ejecutar algo
+
+  let edad = 17;
+
+  console.log(`Veamos el condicional if else, validando si la variable edad es 18 o mayor, actualmente el valor de edad es: ${edad}`)
+
+  if (edad >= 18) {
+    console.log(`Bienvenido al table eres mayor de edad`)
+  } else {
+    console.log(`Vete del table eres menor de edad`)
+  }
+
+  // if - else if - else: se les llama if anidado ya que se validan mas de dos expresiones
+
+  console.log('%c */*/*/ If - else ~ if - else if - else  */*/*/*/', 'color:#a5c71b')
+
+  let hora = 9;
+
+
+  console.log(`Veamos el condicional if - else if - else, validando mas de dos condiciones}
+    if (hora >= 0 && hora < 6) {
+    console.log("No estes chingando")
+  } else if (hora >= 6 && hora < 12) {
+    console.log("Gur Morning")
+  } else if (hora >= 12 && hora < 19) {
+    console.log("Buena tarde")
+  } else if (hora >= 19 && hora <= 23) {
+    console.log("Buena noche")
+  }
+  Considerando que "let hora = ${hora}"  
+  `)
+
+
+
+  if (hora >= 0 && hora < 6) {
+    console.log(`No estes chingando`)
+  } else if (hora >= 6 && hora < 12) {
+    console.log(`Gur Morning`)
+  } else if (hora >= 12 && hora < 19) {
+    console.log(`Buena tarde`)
+  } else if (hora >= 19 && hora <= 23) {
+    console.log(`Buena noche`)
+  }
+
+  // simplificador del if else : Operador Ternario
+
+  console.log('%c */*/*/ Operador Ternario  */*/*/*/', 'color:#a5c71b')
+
+  console.log(`Para el ejercicio del operador ternario validaremos nuevamente la edad, con la siguiente estructura:
+
+  let mayoriaEdad = (edad<18) ? "Eres menor de edad" : "Eres Mayor de edad"
+  
+valor de edad: ${edad}
+`)
+
+  let mayoriaEdad = (edad < 18) ? "Eres menor de edad" : "Eres Mayor de edad"
+
+  console.log(mayoriaEdad);
+
+
+  console.log('%c */*/*/ Switch Case  */*/*/*/', 'color:#a5c71b')
+
+  let dia = 5;
+
+  console.log(`Veremos la siguiente estructura de un switch case:
+  
+   switch (dia) {
+    case 0:
+      console.log("Es Domingo")
+      break;
+    case 1:
+      console.log("Es Lunes")
+      break;
+    case 2:
+      console.log("Es Martes")
+      break;
+    case 3:
+      console.log("Es Miercoles")
+      break;
+    case 4:
+      console.log("Es Jueves")
+      break;
+    case 5:
+      console.log("Es Viernes")
+      break;
+    case 6:
+      console.log("Es Sabado")
+      break;
+
+    default:
+      console.log("Error en la fecha")
+      break;
+  }
+
+  considerando que el valor actual de let dia = ${dia}
+  `)
+
+  switch (dia) {
+    case 0:
+      console.log(`Es Domingo`)
+      break;
+    case 1:
+      console.log(`Es Lunes`)
+      break;
+    case 2:
+      console.log(`Es Martes`)
+      break;
+    case 3:
+      console.log(`Es Miercoles`)
+      break;
+    case 4:
+      console.log(`Es Jueves`)
+      break;
+    case 5:
+      console.log(`Es Viernes`)
+      break;
+    case 6:
+      console.log(`Es Sabado`)
+      break;
+
+    default:
+      console.log("Error en la fecha")
+      break;
+  }
+
+</script>
+
+
+
+
+
 </html>
