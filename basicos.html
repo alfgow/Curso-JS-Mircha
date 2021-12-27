@@ -320,5 +320,62 @@
 
 </script>
 
+<!-- !arreglos -->
+<script>
+  console.log('%c***************Arreglos********************', 'background: #222; color: #bada55')
+
+
+  const colores = ["Verde", "Blanco", "Rojo", "Azul"]
+
+  colores.forEach(function (el, index) {
+    console.log(`
+        <li id=${index}>${el}</li>
+    `)
+
+  });
+</script>
+
+<!-- !objetos -->
+<!-- ?Dentro de un objeto, a las variables se les conoce como atributos o propiedades y a las funciones se les conoce como metodos -->
+<script>
+  console.log('%c***************Objetos********************', 'background: #222; color: #bada55')
+
+  const objetob = {}
+  console.log(objetob)
+
+  const persona = {
+    Nombre: "Alfonso",
+    Apellido: "Villanueva",
+    ApellidoMaterno: "Quiroz",
+    Edad: "32 años",
+    Pasatiempos: ["Warzone", "Aprender Programacion", "Autos"],
+    Soltero: false,
+    Contacto: {
+      mail: "alfonso@java.com",
+      cel: "555555555555",
+      twitter: "@alfgow"
+    },
+    saludar: function () {
+      console.log(`Hola`)
+    },
+    decirMiNombre: function () {
+      console.log(`Hola me llamo ${this.Nombre} ${this.Apellido} y me gusta ${this.Pasatiempos}`)
+    }
+  }
+
+  // la forma de acceder a los atributos de un objeto es: persona.nombre 
+
+  console.log(persona)
+
+  console.log(`El nombre de la persona es: ${persona.nombre}`)
+
+  console.log(`${persona.nombre} es un tipo de ${persona.Edad} que gusta de ${persona.Pasatiempos}`)
+
+  persona.decirMiNombre();
+
+</script>
+
+<!-- !Tipos de operadores -->
+
 
 </html>
