@@ -376,6 +376,39 @@
 </script>
 
 <!-- !Tipos de operadores -->
+<script>
 
+  // Aritmeticos, son los tipicos operadores de suma(+), resta(-), multiplicacion(*) o division (/) y respeta las leyes de signos
+
+  // relacionales: son aquellos comparativos menor que(<), mayor que (>), igual (=),  menor que o igual (<=) mayor que o igual (>=), exactamente igual (===) , diferente de (1=) muy diferente (!==)
+  console.log('%c***************Operadores********************', 'background: #222; color: #bada55')
+
+  console.log(7 === 7);
+  console.log("7" === 7)
+
+  // operadores de incremento y decremento
+
+  let i = 1;
+  console.log(++i)
+
+  // operadores logicos: ! (not), || Or, && And
+
+  console.log(`%c vamos a ocupar ! para cambiar, false a true y true a false`, 'color: yellow')
+  console.log(`"console.log(!true)" nos dara false:  ` + !true)
+  console.log(`"console.log(!false)" nos dara true:  ` + !false)
+
+
+  console.log(`%c vamos a ocupar || or para evaluar si alguna de las condiciones se cumple`, 'color: yellow')
+
+  console.log(`Para el ejemplo realizaremos "console.log((9 === 9) || ('9' === 9))" donde estamos diciendo que si numero 9 es identico a numero 9 o cadena de texto 9 es identico a numero 9, como la primer expresion es true, la validacion con OR dira true:`)
+  console.log((9 === 9) || ('9' === 9))
+
+  console.log(`%c vamos a ocupar && or para evaluar que todas las condiciones se cumplan`, 'color: yellow')
+
+  console.log(`Para el ejemplo realizaremos "console.log((9 === 9) && ('9' === 9))" donde estamos diciendo que si numero 9 es identico a numero 9 o cadena de texto 9 es identico a numero 9, como la primer expresion es true, la validacion con && dira false ya que la segunda expresion no se cumple:`)
+
+  console.log((9 === 9) && ('9' === 9))
+
+</script>
 
 </html>
