@@ -412,7 +412,6 @@
 </script>
 
 <!-- !condicionales -->
-
 <script>
 
   console.log('%c */*/*/ Condicionales  */*/*/*/', 'color:#a5c71b')
@@ -544,7 +543,441 @@ valor de edad: ${edad}
 
 </script>
 
+<!-- !Ciclos o bucles -->
+<script>
 
+  console.log('%c */*/*/ Ciclos o Bucles  */*/*/*/', 'color:#a5c71b')
+
+
+  let contador = 0
+
+  console.log(`Primero veremos el While con la siguiente estructura:
+  
+    while (contador < 10) {
+    console.log(contador)
+    contador++
+  }
+
+  valor de contador: ${contador}
+
+  `)
+
+
+  while (contador < 10) {
+    console.log(contador)
+    contador++
+  }
+
+  console.log(`Ahora veamos el ciclo for con la siguiente estructura
+  
+  for (let alfgow = 0; alfgow < 10; alfgow++) {
+  console.log(alfgow)
+  
+}
+  
+  `)
+
+
+  for (let alfgow = 0; alfgow < 10; alfgow++) {
+    console.log(`La Varibale alfgow tiene el valor ${alfgow}`)
+
+  }
+
+  let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+  console.log(`Ahora veamos el ciclo for con interaccion de un arreglo:
+
+  let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90,100]
+
+  el for quedaria de la siguiente manera
+
+  for (let i = 0; i < numeros.length; i++) {
+    console.log(numeros[i]);
+  }
+}
+  
+  `)
+
+  for (let i = 0; i < numeros.length; i++) {
+    console.log(`El arreglo va en ${numeros[i]}`);
+  }
+
+  console.log('%c */*/*/ ForIn  */*/*/*/', 'color:#a5c71b')
+
+
+  const alfgow2 = {
+    nombre: "Alfonso",
+    apellido: "Villanueva",
+    edad: 32
+  }
+
+  for (const propiedad in alfgow2) {
+    console.log(`key: ${propiedad}, value: ${alfgow2[propiedad]}`)
+  }
+
+
+  console.log('%c */*/*/ ForOf  */*/*/*/', 'color:#a5c71b')
+
+  for (const elemento of numeros) {
+    console.log(elemento)
+  }
+
+</script>
+
+<!-- ! Manejo de Errores -->
+<script>
+
+  console.log('%c */*/*/ Veamos el manejo de errores  */*/*/*/', 'color:#a5c71b')
+
+  console.log(`TryCatch:
+  
+  try {
+
+    En el Try se agrega el codigo a evaluar
+
+  } catch (error) {
+
+    El catch toma el error que se pueda generar en el codigo a evaluar
+
+  }
+
+  `)
+
+  try {
+    let alfgow = 10
+    if (isNaN(alfgow)) {
+      throw new Error("El dato no es un número")
+    }
+    console.log(alfgow * alfgow)
+  } catch (error) {
+    console.log(`Se produjo el siguiente ${error}`)
+  }
+
+</script>
+
+<!-- ! Break y continue -->
+<script>
+
+  console.log('%c */*/*/ Veamos Break y Continue  */*/*/*/', 'color:#a5c71b')
+
+  // arreglo de 10 digitos
+  const numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+  console.log(`Break, utilizaremos el brake para romper un ciclo si se cumple la condicion:
+  
+  for (let i = 0; i < numeros2.length; i++) {
+    if (numeros2 === 5) {
+      break
+    }
+    console.log(numeros2[i])
+
+  }
+
+  `)
+  // recorreremos el arreglo con un for
+  for (let i = 0; i < numeros2.length; i++) {
+    if (i === 5) {
+      break
+    }
+    console.log(numeros2[i])
+
+  }
+
+  console.log(`Ahora, utilizaremos el continue para continuar un ciclo si se cumple la condicion:
+  
+  for (let i = 0; i < numeros2.length; i++) {
+    if (numeros2 === 5) {
+      continue
+    }
+    console.log(numeros2[i])
+
+  }
+
+  `)
+
+  for (let i = 0; i < numeros2.length; i++) {
+    if (i === 5) {
+      continue
+    }
+    console.log(numeros2[i])
+
+  }
+
+
+</script>
+
+<!-- ! Destructuración -->
+<script>
+
+  console.log('%c */*/*/ Destructuracion  */*/*/*/', 'color:#a5c71b')
+  const numeros3 = [1, 2, 3]
+
+  const [uno, dos, tres] = numeros3
+  console.log(uno, dos, tres)
+
+  let persona2 = {
+    nombre2: "Alfonso",
+    apellido2: "Villanueva",
+    edad2: "32"
+  }
+
+  let { nombre2, apellido2, edad2 } = persona2
+  console.log(nombre2, apellido2, edad2)
+
+</script>
+
+<!-- !Objetos Literales -->
+<script>
+
+  console.log('%c */*/*/ Objetos literales  */*/*/*/', 'color:#a5c71b')
+
+  let nombreMascota = 'Sr. Cuyo',
+    edadMascota = '3 meses';
+
+  console.log(`Para este ejercicio tendremos las siguientes variables:
+    
+    let nombreMascota = 'Sr. Cuyo',
+    edadMascota = '3 meses';
+
+    en palabras basicas, un Objeto literal es aquel que sus atributos son variables que previamente han sido declaradas,
+
+    En funcion de lo anterior, veamos el objeto literal con la manera antigua de hacerlo
+
+    const mascota = {
+    nombre: nombreMascota,
+    edad: edadMascota,
+    chifla: function () {
+      console.log("Fiuuuu fiuuuu")
+    }
+  }
+
+    `);
+
+  const mascota = {
+    nombre: nombreMascota,
+    edad: edadMascota,
+    chifla: function () {
+      console.log("Fiuuuu fiuuuu")
+    }
+  }
+  console.log(mascota)
+  mascota.chifla()
+
+  console.log(`Ahora veamos el resultado con la nueva forma que seria:
+  
+    const cuyo = {
+    nombreMascota,
+    edadMascota
+     chifla () {
+      console.log("Fiuuuu fiuuuu")
+    }
+  }
+
+  notese que JS automaticamente determina el nombre y el valor de los atributos que se le estan dando al objeto y que las funciones carecen de la palabra reservada function, basta con agregar () al parametro
+
+  `);
+
+  const cuyo = {
+    nombreMascota,
+    edadMascota,
+    chifla() {
+      console.log("Fiuuuu fiuuuu fiuuuu")
+    }
+  }
+
+  console.log(cuyo);
+  cuyo.chifla()
+
+</script>
+
+<!-- !Parámetros REST & Operador Spread -->
+<script>
+
+  console.log('%c */*/*/  Parámetros REST & Operador Spread  */*/*/*/', 'color:#a5c71b')
+
+  console.log(`%c Parametros REST se definen con ...`, `color: red`)
+  console.log(`Son una forma de virtualmente ir agregando parametros infinitos a una funcion o una variable, para el ejemplo utilizaremos el siguiente:
+  
+  function sumarRest(a, ...b) {
+    let resultadoSuma = a;
+
+    b.forEach(function (n) {
+      resultadoSuma += n
+    });
+
+    return resultadoSuma;
+  }
+  
+  `);
+
+  function sumarRest(a, ...b) {
+    let resultadoSuma = a;
+
+    b.forEach(function (n) {
+      resultadoSuma += n
+    });
+
+    return resultadoSuma;
+  }
+
+  console.log(sumarRest(5, 5, 5, 5, 5, 5, 5, 5, 5, 5))
+
+
+  console.log(`%c Spread Operator, tambien se define con  ... pero es una manera de mezclar arreglos en uno solo`, `color: red`)
+
+  console.log(`Para el ejercicio primero definiremos dos arreglos:
+  
+    const arr1 = [1, 2, 3, 4, 5]
+  const arr2 = [6, 7, 8, 9, 0]
+
+  posterioremente con el spread operator ... los mezclaremos en un tercer arreglo
+
+  const arr3 = [...arr1, ...arr2]
+
+  finalmente mostramos resultado
+  
+  `);
+
+  const arr1 = [1, 2, 3, 4, 5]
+  const arr2 = [6, 7, 8, 9, 0]
+
+  const arr3 = [...arr1, ...arr2]
+
+  console.log(arr3);
+
+</script>
+
+<!-- ! Arrow function -->
+<script>
+
+  console.log('%c */*/*/  Arrow Function  */*/*/*/', 'color:#a5c71b')
+
+  console.log(`Una arrow Function basicamente es quitar la palabra fuction y porner lo siguiente => por ejemplo:
+  
+  const saludar = () => {
+    console.log("Saludo")
+
+  }
+
+  `);
+
+  console.log(`Solamente cuando la Arrow Function tiene una sola linea de instruccion podemos eliminar los {}
+  
+  siguiendo con el ejemplo quedaria:
+
+  const saludar = () => console.log("Saludo")
+  
+  `);
+
+  console.log(`%c para recibir parametros simplemente los pasamos en el parantesis, sin embargo, si solo es un parametro lo podemos pasar sin los parentesis, seguimos con el ejemplo:
+
+  sin parametros lleva parentesis:
+
+  const saludar = () => console.log('Hola')
+  
+  con dos o mas parametros:
+
+  const saludar = (nombre, apellido) => console.log(\`Hola ${nombre}, ${apellido}\`)
+
+  con un solo parametro - sin parentesis
+
+  const saludar = nombre => console.log(\` Hola ${nombre} \`)
+  
+  
+  `, `color: yellow`);
+
+  const saludarConArrowFunction = nombre => console.log(`hola ${nombre}`)
+
+  saludarConArrowFunction('Poncho')
+
+
+  console.log(`%c Las Arrow Function tambien tienen el return implicito, por ejmplo el ejercicio  de las sumas:
+  
+   const sumar = function(a+b) {
+     return a+b
+   }
+
+   con Arrow Function quedaria de la siguiente manera - sin Return
+
+   const sumarConArrowFunction = (a,b) => a+b
+
+  `, `color: pink`);
+
+  const sumarConArrowFunction = (a, b) => a + b
+
+  console.log(sumarConArrowFunction(9, 9));
+
+  console.log(`Aun con las Arrow Function, si la funcion lleva dos o mas lineas de instruccion debemos poner {} para el ejmplo veamos:
+
+      const arrowFunctionVariasLineas = () => {
+    console.log('Que');
+    console.log('Tranza');
+    console.log('Banda');
+    console.log('Como');
+    console.log('Estan');
+  }
+  
+  `);
+
+  const arrowFunctionVariasLineas = () => {
+    console.log(`Que`);
+    console.log(`Tranza`);
+    console.log(`Banda`);
+    console.log(`Como`);
+    console.log(`Estan`);
+  }
+
+  arrowFunctionVariasLineas()
+
+
+  console.log(`Utilizando las Arrow Function para iterar con los arreglos con el metodo forEach, veamos el siguiente ejemplo:
+  
+  const numerosArrowFunction = [1, 2, 3, 4, 5, 6, 7, 8]
+
+  numerosArrowFunction.forEach(el, index) => console.log("El elemento EL esta en la posicion INDEX")
+  
+  `);
+
+
+  const numerosArrowFunction = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  numerosArrowFunction.forEach((el, index) => console.log(`El elemento ${el} esta en la posicion ${index}`))
+
+  console.log(`%c Las Arrow Function captura el objeto this del contexto en el que se encuentren, por lo tanto no es recomendable hacer lo siguiente`, `color: yellow`);
+  console.log(`Para el ejemplo veamos:
+  
+manera function en un objeto literal:
+
+  const cuyo = {
+    nombre: 'Sr. Cuyo',
+    chiflar () {
+      console.log(this)
+    }
+  }
+
+Con Arrow Function - no recomendable:
+
+const cuyo = {
+    nombre: 'Sr. Cuyo',
+    chiflar: () => {
+      console.log(this)
+    }
+  }
+
+  
+  `);
+
+
+  const cuyoArrow = {
+    nombre: 'Sr. Cuyo',
+    chiflar: function () {
+      console.log(this)
+    }
+  }
+
+  cuyoArrow.chiflar();
+
+</script>
 
 
 
