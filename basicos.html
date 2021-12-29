@@ -979,6 +979,111 @@ const cuyo = {
 
 </script>
 
+<!-- !  Programacion Orientada a Objetos -->
+<script>
+
+  // POO
+  /*
+  
+  Clases - Modelo a Seguir
+   |---->Objetos - Instancias de una clase
+               |------>Atributos - Son las caracteristicas o propiedades de los objetos
+               |------>Metodos - Acciones que un objeto puede realizar (funciones dentro de un objeto)
+
+  */
+
+  console.log(`%c PROGRAMACION ORIENTADA A OBJETOS`, `color: yellow`);
+  console.log(`%c Declaremos una Funcion constructora`, `color: red`);
+  console.log(`Las clases siempre se declaran con UpperCamelCase, por ejemplo class SerHumano`);
+  console.log(`En las Funciones Constructoras, para declarar un metodo de la funcion debemos utilizar .this, no aplica la forma de los objetos literales, por lo que tenemos que usar la palabra reservada function anonima, veamos el ejemplo
+
+  // funcion constructora
+function Animal(nombre, genero) {
+
+    // atributos
+    this.nombre = nombre;
+    this.genero = genero;
+
+    // metodo
+    this.sonar = function () {
+      console.log('Hago sonidos por que estoy vivo');
+    }
+  }
+
+  despues de declarar la funcion Constructora vamos a utilizarlo con dos ejemplos:
+
+   const snoopy = new Animal("Snoopy", "Perro"),
+    lolaBunny = new Animal("Lola Bunny", "Conejo")
+  
+    Sin embargo es completamente recomendable asignar los metodos al prototipo y no a la funcion constructora
+
+    
+  `);
+
+  // funcion constructora
+  function Animal(nombre, tipo) {
+
+    // atributos
+    this.nombre = nombre;
+    this.tipo = tipo;
+
+  }
+
+  // Metodos agregados al prototipo de la funcion constructora
+  Animal.prototype.sonar = function () {
+    console.log(`Hago sonidos por que estoy vivo`);
+  }
+
+  Animal.prototype.saludar = function () {
+    console.log(`Hola Me llamo ${this.nombre}`);
+  }
+
+  // utilizando la funcion constructora
+  const snoopy = new Animal("Snoopy", "Perro"),
+    lolaBunny = new Animal("Lola Bunny", "Conejo")
+
+  console.log(snoopy);
+  console.log(lolaBunny);
+
+  // utilizando los Metodos agregados al prototipo de la funcion constructora
+  snoopy.sonar()
+  snoopy.saludar()
+  lolaBunny.sonar()
+  lolaBunny.saludar()
+
+  // Herencia Prototipica
+  console.log(`Para la Herencia Prototipica, vamos a generar una funcion constructora para crear un perro, prototipo que heredara las caracteristicas de la funcion constructora Animal, con el elemento super vamos a llamar el constructor de la clase padre, veamos el ejemplo
+  
+
+  
+  `);
+
+  function Perro(nombre, tipo, size) {
+    this.super = Animal;
+    this.super(nombre, tipo);
+    this.size = size;
+  }
+
+  // perro esta heredando de animal
+  Perro.prototype = new Animal()
+  Perro.prototype.constructor = Perro
+
+  // sobreescritura de los metodos del prototipo padre en el hijo
+
+  Perro.prototype.sonar = () => console.log(`Soy un perro y hago guauuuu`);
+
+  Perro.prototype.ladrar = () => console.log(`guauuu guauuu`);
+
+  const frank = new Perro('Frank', 'Macho', 'Chico')
+
+  console.log(frank);
+
+  frank.sonar();
+  frank.ladrar();
+
+</script>
+
+<!-- ? Seguir en minuto 11 del video de Curso JavaScript: 22. Prototipos -->
 
 
 </html>
