@@ -1083,7 +1083,130 @@ function Animal(nombre, genero) {
 
 </script>
 
-<!-- ? Seguir en minuto 11 del video de Curso JavaScript: 22. Prototipos -->
+<!-- ! Clases -->
+<script>
+
+  console.log(`%c /*/*/*/*/*/*/    CLASES    */*/*/*/`, 'color: yellow');
+
+  console.log(`Las clases no reciben parametros, para poder recibir paramentros las clases tienen un metodo que se llama constructor, veamos el ejemplo:
+  
+  // Declaracion de la clase - class AnimalClass {}
+
+  class AnimalClass {
+
+    // constructor(parametros){}
+    constructor(nombre, tipo) {
+
+      // Aqui iran las propiedades / atributos
+      this.nombre = nombre;
+      this.tipo = tipo;
+
+    }
+
+    // los metodos en las clases no llevan la palabra function
+    sonar() {
+      console.log("Hago sonidos por que estoy vivo")
+    }
+
+  }
+  
+  `);
+
+
+  // Declaracion de la clase - class AnimalClass {}
+
+  class AnimalClass {
+
+    // constructor(parametros){}
+    constructor(nombre, tipo) {
+
+      // Aqui iran las propiedades / atributos
+      this.nombre = nombre;
+      this.tipo = tipo;
+
+    }
+
+    // los metodos en las clases no llevan la palabra function
+    sonar() {
+      console.log("Hago sonidos por que estoy vivo")
+    }
+
+    saludar() {
+      console.log(`Hola, me llamo ${nombre}`);
+    }
+
+  }
+
+
+  class PerroClass extends Animal {
+    constructor(nombre, tipo, size) {
+      // el Metodo super(parametros) llama y trae el objeto constructor de la clase padre, hay que darle los parametros
+      super(nombre, genero);
+      this.size = size;
+      this.raza = null;
+    }
+
+    sonar() {
+      console.log(`Soy un perro y mi sonido es el ladrido`);
+    }
+
+    ladrar() {
+      console.log(`guau guau`);
+    }
+
+    // Un metodo estatico se puede ejecutar sin necesidad de instanciar una clase
+
+    static queEres() {
+
+      console.log(`El mejor amigo del hombre`);
+
+    }
+
+
+    // Los Set y Get son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+
+    get getRaza() {
+      return this.raza;
+    }
+
+    set setRaza(raza) {
+      this.raza = raza;
+    }
+
+  }
+
+
+  // Un metodo estatico se puede ejecutar sin necesidad de instanciar una clase
+  console.log(`%c Metodo estatico: se puede ejecutar sin necesidad de instanciar una clase, veamos el ejemplo:
+
+ static queEres() {
+
+      console.log('El mejor amigo del hombre');
+
+    }
+
+`, 'color: yellow');
+
+  PerroClass.queEres()
+
+  const emmet = new Perro("Emmet", "Perro Feo", "Chico"),
+    scooby = new Perro("Scooby", "Perro Chingon", "Gigante");
+
+  console.log(emmet);
+  emmet.sonar();
+  emmet.ladrar();
+  emmet.saludar()
+
+  console.log(scooby);
+
+  scooby.sonar();
+  scooby.ladrar()
+
+  scooby.getRaza = "Gran Danes";
+  console.log(scooby.getRaza);
+
+
+</script>
 
 
 </html>
